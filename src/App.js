@@ -1,32 +1,26 @@
-
-import Header from "./Header"
-import Content from "./Content"
-import Total from "./Total"
+import Header from './Header';
+import Content from './Content';
+import Total from './Total';
 const App = () => {
-  const course = 'Half Stack application development'
-  const part1 = 'Fundamentals of React'
-  const exercises1 = 10
-  const part2 = 'Using props to pass data'
-  const exercises2 = 7
-  const part3 = 'State of a component'
-  const exercises3 = 14
+  const course = 'Half Stack application development';
+  const part1 = 'Fundamentals of React';
+  const exercises1 = 10;
+  const part2 = 'Using props to pass data';
+  const exercises2 = 7;
+  const part3 = 'State of a component';
+  const exercises3 = 14;
+  const total = exercises1 + exercises2 + exercises3
 
   return (
     <div>
+      <Header course={course} />
+      <Content part1={part1} exercise1={exercises1} />
+      <Content part2={part2} exercises2={exercises2} />
+      <Content part3={part3} exercises3={exercises3} />
 
-      <Header course={course}/>
-      <Content part1={part1} exercise1={exercises1}/>
-      <Content part2={part2} exercise2={exercises2}/>
-      <Total/>
-      
-    
-     
-      <p>
-        {part3} {exercises3}
-      </p>
-      <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>
+      <Total total={total}/>
     </div>
-  )
-}
+  );
+};
 
 export default App;

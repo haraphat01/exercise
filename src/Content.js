@@ -10,6 +10,11 @@ export default function Content(props) {
       <p>
         {props.part2} {props.exercises2}
       </p>
+      <p>
+        {props.part3} {props.exercises3}
+      </p>
+
+     
     </div>
   );
 }
